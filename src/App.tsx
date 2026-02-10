@@ -222,7 +222,6 @@ export const App: React.FC = () => {
               {tempTodo && <TodoItem todo={tempTodo} isProcessing={isAdding} />}
             </section>
 
-            {/* Hide the footer if there are no todos */}
             <FooterTodo
               activeCount={activeCount}
               filter={filter}
@@ -234,8 +233,6 @@ export const App: React.FC = () => {
         )}
       </div>
 
-      {/* DON'T use conditional rendering to hide the notification */}
-      {/* Add the 'hidden' class to hide the message smoothly */}
       <div
         data-cy="ErrorNotification"
         className={cn(
@@ -254,7 +251,6 @@ export const App: React.FC = () => {
           className="delete"
           onClick={hideError}
         />
-        {/* show only one message at a time */}
         {errorMessage}
       </div>
     </div>
